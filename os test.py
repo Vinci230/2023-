@@ -6,7 +6,6 @@ from datetime import datetime, timedelta
 target_date = '2024-01-27'
 start_date = datetime.strptime(target_date, "%Y-%m-%d")
 end_date = start_date + timedelta(days=1)
-
 # GitHub 仓库 URL
 repo_url = 'https://github.com/Vinci230/2024-lanshanexam.git'
 
