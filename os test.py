@@ -3,7 +3,7 @@ import subprocess
 from datetime import datetime, timedelta
 
 # 指定日期范围（例如，27号）
-target_date = '2024-01-24'
+target_date = '2024-01-27'
 start_date = datetime.strptime(target_date, "%Y-%m-%d")
 end_date = start_date + timedelta(days=1)
 
