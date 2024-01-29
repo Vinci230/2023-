@@ -10,7 +10,7 @@ end_date = start_date + timedelta(days=1)
 repo_url = 'https://github.com/Vinci230/2024-lanshanexam.git'
 
 # 克隆仓库到临时目录
-temp_repo_path = 'temp1_repo'
+temp_repo_path = 'temp_repo'
 git_clone_command = ['git', 'clone', repo_url, temp_repo_path]
 subprocess.run(git_clone_command)
 
@@ -28,6 +28,10 @@ git_command = [
 
 # 执行 Git 命令
 result = subprocess.run(git_command, stdout=subprocess.PIPE, text=True,encoding='utf-8')
-
+#readneme path
+readme_path = 'D:/Users/Vinci/Desktop/2024-lanshanexam/README.md'
+# 将提交信息追加到README文件
+with open(readme_path, 'a', encoding='utf-8') as readme_file:
+    readme_file.write('\n\n' + result.stdout)
 # 打印 commit 信息
-print(result.stdout)
+#print(result.stdout)
